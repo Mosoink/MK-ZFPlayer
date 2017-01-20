@@ -662,7 +662,7 @@ typedef NS_ENUM(NSInteger, PanDirection){
                 //NSError *error = [self.player.currentItem error];
                 //NSLog(@"视频加载失败===%@",error.description);
                 self.controlView.horizontalLabel.hidden = NO;
-                self.controlView.horizontalLabel.text = MILocalizedString(@"VideoPlayFailed", nil);
+                self.controlView.horizontalLabel.text = [_settingInfo objectForKey:ZFPlayerSettingInfoFailAlertText]?:@"播放失败，请重试";
             }
         } else if ([keyPath isEqualToString:@"loadedTimeRanges"]) {
             
@@ -1849,3 +1849,5 @@ typedef NS_ENUM(NSInteger, PanDirection){
 }
 
 @end
+
+NSString * const ZFPlayerSettingInfoFailAlertText = @"ZFPlayerSettingInfoFailAlertText";

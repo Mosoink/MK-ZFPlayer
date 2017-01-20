@@ -95,6 +95,8 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
 
 @property (nonatomic, weak  ) id<ZFPlayerViewDelegate> delegate;
 
+@property (nonatomic, copy  ) NSDictionary  *settingInfo;
+
 // default CGFLOADT_MAX
 @property (nonatomic) CGFloat maxDurationCanForward;
 
@@ -160,3 +162,5 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
 
 
 @end
+
+UIKIT_EXTERN NSString * const ZFPlayerSettingInfoFailAlertText;
