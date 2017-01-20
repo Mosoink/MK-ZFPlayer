@@ -367,9 +367,9 @@ typedef NS_ENUM(NSInteger, PanDirection){
 {
     _maxDurationCanForward = CGFLOAT_MAX;
     // 如果已经下载过这个video了，那么直接播放本地视频
-    if ([[ZFDownloadManager sharedInstance] isCompletion:videoURL.absoluteString]) {
-        videoURL = [NSURL fileURLWithPath:ZFFileFullpath(videoURL.absoluteString)];
-    }
+    // if ([[ZFDownloadManager sharedInstance] isCompletion:videoURL.absoluteString]) {
+    //     videoURL = [NSURL fileURLWithPath:ZFFileFullpath(videoURL.absoluteString)];
+    // }
     _videoURL = videoURL;
     
     // 播放开始之前（加载中）设置站位图
@@ -1287,10 +1287,10 @@ typedef NS_ENUM(NSInteger, PanDirection){
 
 - (void)downloadVideo:(UIButton *)sender
 {
-    __weak UIButton *btn = sender;
-    [[ZFDownloadManager sharedInstance] download:self.videoURL.absoluteString progress:^(CGFloat progress, NSString *speed, NSString *remainingTime, NSString *writtenSize, NSString *totalSize) {
-        dispatch_async(dispatch_get_main_queue(), ^{ btn.enabled = NO; });
-    } state:^(DownloadState state) {}];
+    // __weak UIButton *btn = sender;
+    // [[ZFDownloadManager sharedInstance] download:self.videoURL.absoluteString progress:^(CGFloat progress, NSString *speed, NSString *remainingTime, NSString *writtenSize, NSString *totalSize) {
+    //     dispatch_async(dispatch_get_main_queue(), ^{ btn.enabled = NO; });
+    // } state:^(DownloadState state) {}];
 }
 
 #pragma mark - NSNotification Action
