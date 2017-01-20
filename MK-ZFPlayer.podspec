@@ -25,10 +25,10 @@ Pod::Spec.new do |s|
   s.resources    = "ZFPlayer/*.bundle"
   
   s.source_files = [
-    '**/NSString+Crypt.{h,m}'
+    'ZFPlayer/*.{h,m}'
   ]
   s.public_header_files = [
-    '**/NSString+Crypt.h'
+    'ZFPlayer/*.h'
   ]
   s.frameworks = [
       'AVFoundation',
